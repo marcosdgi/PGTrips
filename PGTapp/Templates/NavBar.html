@@ -1,29 +1,41 @@
 <!DOCTYPE html>
- 
 
 
 <html >
 <head>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'PGTapp/css/Style.css' %}">
+ 
 </head>
-<body>
-    <nav id="navbar">
-        <ul>
-            <li class="elemento">
-               <a href="{% url 'home' %}"> Inicio</a>
-            </li>
-            <li class="elemento">
-             <a href="{% url 'reservaciones' %}">Reservaciones</a>   
-            </li>
-            <li class="elemento">
-               <a href="{% url 'programacion' %}">Programaciones</a> 
-            </li>
-            <li class="elemento">
-               <a href="{% url 'transporte' %}">Transportes </a> 
-            </li>
-            <li class="elemento">
-               <a href="">Informacion</a> 
-            </li>
+
+     <div class="contenedor">
+      <ul class="lista">
+         <li>
+            <a href="{% url 'home' %}" class="a"> Inicio </a>
+         </li>
+         <div id="pagina1" class="transition active">
+
+         </div>
+         <li >
+          <a href="{% url 'reservaciones' %}"class="a">Reservaciones</a>   
+         </li>
+         <li>
+            <a href="{% url 'programacion' %}"class="a">Programaciones</a> 
+         </li>
+         <li >
+            <a href="{% url 'transporte' %}"class="a">Transportes </a> 
+         </li>
+         <li >
+            <a href="{% url 'informacion' %}"class="a">Informacion</a> 
+         </li>
+         <div class="div">
+            <button id="button" onclick="window.location.href='/login'">Iniciar sesión</button>
+         </div>
+            
+     </div>
+
+            
         </ul>
-    </nav>
+   
 </body>
 </html>

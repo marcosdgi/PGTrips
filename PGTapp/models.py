@@ -1,5 +1,7 @@
+from django.utils import timezone
 from django.db import models
-
+from django.contrib.auth.models import User, AbstractUser
+from django.conf import settings
 # Create your models here.
 class Cliente (models.Model):
     id = models.AutoField(primary_key= True)
@@ -15,7 +17,11 @@ class Reservacion(models.Model):
     codigo = models.AutoField(primary_key=True)
     Origen = models.CharField(max_length=50)
     Destino = models.CharField(max_length=50)
+    Hora = models.TimeField(default=timezone.now)
+    Fecha = models.DateField(default=timezone.now)
 
+    def __str__(self):
+        return '%s, %s, %s, %s' %(self.Origen, self.Destino, self.Hora, self.Fecha )
 
 class Auto(models.Model):
     id = models.AutoField(primary_key=True)
@@ -42,3 +48,12 @@ class Destino(models.Model):
 class Viaje_Destino(models.Model):
     id_viaje = models.ForeignKey(Viaje, on_delete=models.CASCADE)
     id_destino = models.ForeignKey(Destino, on_delete=models.CASCADE)
+
+class Usuario(models.Model):
+    nombre_usuario = models.CharField(max_length=50)
+    contraseña = models.CharField(max_length=50)
+    email = models.EmailField()
+    codigo = models.IntegerField()
+
+    def __str__(self):
+        return '%s, %s, %s, %s'%(self.nombre_usuario, self.contraseña, self.email, self.codigo)

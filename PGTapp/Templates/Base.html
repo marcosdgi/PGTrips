@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="">
 <html>
-<head>
-    <title>{% block title %} {% endblock %}</title>
- <!-- aqui estoy incluyendo el archivo que contiene la barra de navegacion -->{% include "NavBar.html" %}
-</head>
-<body>
-    <H1>
-        PGTrips
-    </H1>
-    <hr>
-    <section class="section">
-     {% block content %}
-
-     {% endblock %}
- <br>
-   </section> <hr>
-    <!-- Aqui estoy incluyendo el archivo que contiene el pie de pagina -->
-{% include "Footer.html" %}
+    <head>
+        <title>{% block title %} {% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'PGTapp/css/Style.css' %}">
+<!--         <link rel="stylesheet" href="{% static 'PGTapp/css/Style.css' %}">
+    
+ -->        <!-- aqui estoy incluyendo el archivo que contiene la barra de navegacion -->
+    </head>
+ 
+    </div>
+    
+    <body class="body">
+        {% include "NavBar.html" %}
+        <H1 class="h1">
+            PGTrips
+        </H1>
+        <hr>
+        <section class="section">
+            {% block content %}
+            
+            {% endblock %}
+            <br>
+        </section> 
+        <!-- Aqui estoy incluyendo el archivo que contiene el pie de pagina -->
+        {% include "Footer.html" %}
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'PGTapp/css/Style.css' %}">
+
+    <title>Registrate</title>
+</head>
+<h1 class="h1">
+    Registro de usuario
+</h1>
+<body class = "bodyR">
+    <div class="container">
+        <form action="" method="post" class="form">{%csrf_token%}
+            <table class="table">
+              
+                {{ formularioRegistro.as_table }}
+            </table>            
+            <input type="submit" class="button" value="Aceptar">
+        </form>
+       
+    </div>
+</body>
+</html>

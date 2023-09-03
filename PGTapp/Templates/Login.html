@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <title>Inicio de sesión</title>
+<body class="bodyR">
+
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'PGTapp/css/Style.css' %}">
+    </head>
+    <div class="container">
+        <div class="content">
+          <!-- Contenido principal -->
+          <h1 id="Titulo_login">
+            Inicio de sesion
+               
+            <hr>
+        </h1>
+    
+        </div>
+        <div class="login-tab">
+          <!-- Contenido de la pestaña de inicio de sesión -->
+        <form action="" method="post" class="form">
+            {% csrf_token %}
+        <table class="table">
+            <!-- <p class="plog">Usuario</p> <input type="text" name="user" class="input">
+            <p class="plog">Contraseña</p> <input type="password" name="password" id="pass" class="input" -->>
+           <!--  <p class="p">Email</p> <input type="email" name="email" id="email" class="input">
+            <p class="p">Telefono</p> <input type="text" name="telefono" id="telefono" class="input"> -->
+            {{form.as_p}}
+        </table>    
+        <hr>
+    <input type="submit" value="Aceptar" class="button">
+    <input type="button" value="Registrarse" class="button">
+        </form>
+        </div>
+      </div>
+    
+
+
+</body>
+</html>

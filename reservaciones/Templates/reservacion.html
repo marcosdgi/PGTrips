@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "Base.html"%}    
+{% block title %}
+Homepage
+{% endblock %}
+<head>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'PGTapp/css/Style.css' %}">
+</head>
+<body class="bodyR">
+    <h1 class="h1">
+        Reservaciones
+    </h1>
+    {% block content %}
+    <form action="" method="post"> {% csrf_token %}
+        <div class="form-group">
+          
+            {{ formularioR.as_table }}
+       
+        <input type="submit" value="Aceptar" class="button">
+   
+    </form>
+    {% endblock %}
+</body>
+</html>

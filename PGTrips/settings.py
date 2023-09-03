@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'PGTapp',
+    'reservaciones',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,8 @@ ROOT_URLCONF = 'PGTrips.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Developer/Desktop/Web/PGTrips/PGTapp/Templates'],
+        'DIRS': ['C:/Users/Developer/Desktop/Web/PGTrips/PGTapp/Templates',
+                 'C:/Users/Developer/Desktop/Web/PGTrips/reservaciones/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,3 +128,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_URL = 'inicio_sesion'
+AUTHENTICATION_BACKENDS = [
+       'django.contrib.auth.backends.ModelBackend',
+   ]
+""" AUTH_USER_MODEL = 'PGTapp.' """
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = ''
