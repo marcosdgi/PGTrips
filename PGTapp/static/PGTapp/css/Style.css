@@ -46,6 +46,28 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
     font-style:italic;
    
 }
+#h1_hp {
+    
+        background-color: rgb(243, 243, 243);
+        text-align:center;
+        background-color:rgba(0, 0, 0, 0.1);
+        color:aliceblue;
+        font-style:italic;   
+}
+#container_p{
+    width: min-content;
+    position: initial;
+    margin: 1.5rem 3rem;
+    text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(0, 177, 59), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(1, 170, 236);
+
+}
+
+#container_h1{
+    width: min-content;
+    position:initial;
+    margin: 2rem 46rem;
+}
+
 .h2{
        background-color: rgb(243, 243, 243);
         text-align: center;
@@ -59,6 +81,7 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
     background-image: url('img/5.jpg');
     background-repeat:repeat-y;
     background-size: cover;
+   
   
   }
 .bodyR{
@@ -107,8 +130,8 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
 
 @keyframes animacionh1{
 0%{
-/*     background: linear-gradient(to right, #f5f3f3, #212130);
- */        -webkit-background-clip: text;
+ /*    background: linear-gradient(to right, #f5f3f3, #212130);
+  */       -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: translateY(0);
     
@@ -165,6 +188,7 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
 
  .container {
     position: relative;
+   
   }
   
   /* .content {
@@ -177,7 +201,8 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
     transform: translate(-50%, 50%);
     width: 30rem;
     height: 15rem;
-    background-color: rgb(153, 85, 85);
+    backdrop-filter: blur(1.4rem);
+
     z-index: 1;
     border-style:inset;
     border-width: 0.6rem;
@@ -185,20 +210,20 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
     
 }
 label{
-    color: rgb(224, 233, 233);
-    border-style:double;
-    border-radius: 2rem;
-    margin: 2%;
-    padding: 0.3%;
+    color: rgb(146, 80, 49);
+   
+    margin: 2rem;
+    padding: 2rem;
     color: white    ;
-        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 
 }
     
-input   {   
+.inputR   {   
  border-radius:2rem;
+ padding: 2rem;
  border-collapse: separate;
- 
+
  
 }
 
@@ -210,4 +235,3 @@ text-overflow: ellipsis;
 font-size:large;
 text-shadow:0.3rem 0.4rem 0.4rem black;
 }
-

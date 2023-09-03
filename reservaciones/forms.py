@@ -1,10 +1,8 @@
 from django import forms
-from PGTapp.models import Reservacion,Usuario
-
+from PGTapp.models import Reservacion
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 class reservacion(forms.ModelForm):
-    """ dia = forms.DateField()
-    horario = forms.DateTimeField()
-    destino = forms.CharField(max_length=50) """
     """ Aqui la clase meta hereda los campos del modelo llamado Reservacion """
     class Meta():
         model = Reservacion
@@ -19,15 +17,16 @@ class reservacion(forms.ModelForm):
         }
         
 #Este formulario sera utilizado para guardar los usuarios que se registren dentro de la aplicacion
-class Usuario(forms.ModelForm):
+class Usuario(UserCreationForm):
+    email = forms.EmailField()
     class Meta():
-        model = Usuario
+        model = User
         fields = [
-            'codigo','nombre_usuario', 'contraseña','email'
+            'username','email'
         ]
         widgets = {
-            'codigo':forms.NumberInput(attrs={'class':'inputU'}),
-            'nombre_usuario':forms.TextInput(attrs={'class':'inputU'}),
-            'contraseña':forms.PasswordInput(attrs={'class':'inputU'}),
+            'username':forms.TextInput(attrs={'class':'inputU'}),
+            'password':forms.PasswordInput(attrs={'class':'inputU'}),
+            'Confirm password':forms.PasswordInput(attrs={'class':'inputU'}),
             'email':forms.EmailInput(attrs={'class':'inputU'})
         }

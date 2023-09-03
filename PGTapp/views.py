@@ -22,12 +22,13 @@ def inicio_sesion (request):
    else:
        return render (request, 'Login.html')
        
+class CustomLoginView(LoginView):
+    template_name = 'Login.html'
+
 @login_required
 def base (request):
     return render (request, "Base.html")
 
-class CustomLoginView(LoginView):
-    template_name = 'Login.html'
 
 @login_required
 def homepage (request):

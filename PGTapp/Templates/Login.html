@@ -22,14 +22,14 @@
             {% csrf_token %}
         <table class="table">
             <!-- <p class="plog">Usuario</p> <input type="text" name="user" class="input">
-            <p class="plog">Contraseña</p> <input type="password" name="password" id="pass" class="input" -->>
+            <p class="plog">Contraseña</p> <input type="password" name="password" id="pass" class="input" -->
            <!--  <p class="p">Email</p> <input type="email" name="email" id="email" class="input">
             <p class="p">Telefono</p> <input type="text" name="telefono" id="telefono" class="input"> -->
-            {{form.as_p}}
+            {{form.as_table}}
         </table>    
         <hr>
     <input type="submit" value="Aceptar" class="button">
-    <input type="button" value="Registrarse" class="button">
+    <input type="button" value="Registrarse" class="button" onclick="window.location.href='/registro'">
         </form>
         </div>
       </div>

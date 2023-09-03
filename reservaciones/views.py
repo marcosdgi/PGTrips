@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from reservaciones.forms import reservacion
-from reservaciones.forms import Usuario
+from reservaciones.forms import reservacion,Usuario
+
 # Create your views here.
 
 def Reserva(request):
@@ -17,11 +17,14 @@ def Reserva(request):
 
 
 
-
-def Registrar(request):
+def registro(request):
     if request.method == 'POST':
-        Registro = Usuario(request.POST)
-
-        if Registro.is_valid():
-            Registro.save()
-            return render(request, 'Base.html')
+        FormularioRegistro = Usuario(request.POST)
+        if FormularioRegistro.is_valid():
+            FormularioRegistro.save()
+            return render(request, 'Registro_completo.html')
+        
+    else:
+        FormularioRegistro = Usuario()
+    
+    return render(request, 'Registro.html',{'formularioRegistro':FormularioRegistro})

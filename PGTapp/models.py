@@ -49,11 +49,11 @@ class Viaje_Destino(models.Model):
     id_viaje = models.ForeignKey(Viaje, on_delete=models.CASCADE)
     id_destino = models.ForeignKey(Destino, on_delete=models.CASCADE)
 
-class Usuario(models.Model):
+""" class Usuario(models.Model):
     nombre_usuario = models.CharField(max_length=50)
     contraseña = models.CharField(max_length=50)
     email = models.EmailField()
     codigo = models.IntegerField()
 
     def __str__(self):
-        return '%s, %s, %s, %s'%(self.nombre_usuario, self.contraseña, self.email, self.codigo)
+        return '%s, %s, %s, %s'%(self.nombre_usuario, self.contraseña, self.email, self.codigo) """
