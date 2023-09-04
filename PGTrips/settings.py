@@ -121,17 +121,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
+# url de la carpeta static donde se guardan los estilos 
 STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#url con el nombre de la vista que guarda la funcion del inicio de sesion
 LOGIN_URL = 'inicio_sesion'
+# modelo de autenticacion de usuario que ofrece django 
 AUTHENTICATION_BACKENDS = [
        'django.contrib.auth.backends.ModelBackend',
    ]
-""" AUTH_USER_MODEL = 'PGTapp.' """
+#redireccion luego de logear al usuario
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = ''
