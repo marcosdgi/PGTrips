@@ -23,4 +23,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('',include('PGTapp.urls')),
     path('',include('reservaciones.urls')),
+    path('', include('PGaleria.urls')),
 ]

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'PGTapp',
     'reservaciones',
+    'PGaleria',
 ]
 
 MIDDLEWARE = [
@@ -110,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-us'
 
 TIME_ZONE = 'UTC'
 
@@ -135,3 +137,6 @@ AUTHENTICATION_BACKENDS = [
 """ AUTH_USER_MODEL = 'PGTapp.' """
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = ''
+#configurando las rutas url para que django busque las imagenes que se muestran en la seccion transporte
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

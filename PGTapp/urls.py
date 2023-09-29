@@ -6,7 +6,6 @@ urlpatterns = [
     path('', base ),
     path('home/',homepage, name='home'),
     path ('login/', CustomLoginView.as_view(),name ='login'),
-    path ('transportes/', transportes, name='transporte'),
     path ('programacion/', programacion, name='programacion'),
     path ('informacion/', informacion, name='informacion' ),
 

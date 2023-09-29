@@ -28,7 +28,9 @@ class Auto(models.Model):
     placa = models.CharField(max_length=50)
     modelo = models.CharField(max_length=50)
     km_recorridos = models.IntegerField()
-
+    #los campos de tipo imagen se configuran de esta manera para que cree una carpeta llamada autos 
+    #donde se guardan las imagenes que vienen de la bdd
+    imagen = models.ImageField(null=True, upload_to= 'autos')
 class Chofer (models.Model):
     id = models.AutoField (primary_key=True)
     nombre = models.CharField(max_length=50)

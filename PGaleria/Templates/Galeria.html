@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 {% extends "Base.html" %}
+
+
 {% block title %}
-Transportes
+Galeria
 {% endblock %}
 
 {% block content %}
@@ -10,9 +12,11 @@ Galeria de Autos que ofrecemos
 </H1>
 <hr>
 <section>
-Aqui deben ir las imagenes de los autos 
-
-
+<tbody>
+        {% for auto in autos %}
+            <img src=" {{ auto.imagen.url }}" alt="{{auto.imagen}}">
+        
+    {% endfor %}
+</tbody>
 </section>
-
 {% endblock %}
