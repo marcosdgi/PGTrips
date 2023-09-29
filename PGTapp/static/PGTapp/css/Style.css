@@ -1,28 +1,64 @@
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+}
+
+h1{
+    background: none;
+    text-align: center;
+    color: aliceblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 100%;
+    animation-name: animacionh1;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode:backwards;  
+    animation-direction:alternate-reverse;
+}
+
+.h1{
+    color: #ffff;
+    animation: none;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+}
+
 .lista{
     display: flex;
     list-style-type: none;
     padding: 1rem;
     /* background-color: rgb(252, 248, 248); */
-    overflow:scroll hidden ;
     backdrop-filter: blur(1.4rem);
     color: white;
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-  
+    width: 100%;
+    /* text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; */
+    margin: 0;
 }
 .lista li{
     margin-right: 6%;
 /*    color: rgb(231, 231, 231);*/
     border-style:inset;
     border-radius: 4rem;
-    border-color: radial-gradient(circle, #f5f3f3, #212130);
+    border-color: radial-gradient(circle, #504a4a, #212130);
      padding: 0.3rem;
      backdrop-filter: blur(1.4rem);
      color: white;
-     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+     /* text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; */
 }
 
 .a{
     color: rgb(245, 244, 243);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
 }
 
 .p{
@@ -31,28 +67,25 @@ text-align: justify;
 text-align: center;
 text-overflow: ellipsis;
 font-size: xx-large;
-text-shadow:0.7rem 0.5rem 0.4rem black;
+/* text-shadow:0.7rem 0.5rem 0.4rem black; */
 color: white;
-text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+/* text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; */
+font-family: Arial, Helvetica;
+font-size: 26px;
 }
 
-
-
-.h1{
-    background-color: rgb(243, 243, 243);
+.galery{
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: aliceblue;
-    font-style:italic;
-   
+    width: 100%;
 }
+
 #h1_hp {
     
         background-color: rgb(243, 243, 243);
         text-align:center;
         background-color:rgba(0, 0, 0, 0.1);
         color:aliceblue;
-        font-style:italic;   
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
 }
 #container_p{
     width: min-content;
@@ -77,15 +110,16 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
 }
 
 
-.body {
-    background-image: url('img/5.jpg');
-    background-repeat:repeat-y;
-    background-size: cover;
-   
+.body {  min-height: 100vh; /* Establece una altura mínima del 100% del viewport */
+    background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.5),
+     rgba(0, 0, 0, 1)),
+     url('img/5.jpg'); /* Ruta a tu imagen de fondo y degradado */
+    background-repeat: repeat-y; /* Repite la imagen verticalmente */
+    background-size: cover; /* Ajusta la imagen al tamaño del body */
   
   }
 .bodyR{
-    background-image: url('img/2.jpg');
+    background-image:url('img/2.jpg');
 
     background-repeat:repeat-y;
     background-size: cover;
@@ -95,6 +129,7 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
 }  
 
 #Titulo_login{
+    font-family:Cambria;
     text-align: center;
    color: rgba(136, 22, 22, 0.397);
 }
@@ -110,7 +145,7 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
     height:4rem;
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
- 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -119,8 +154,8 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
 
     border-color: cadetblue;
 }
-#button {
-    margin-left: 33rem;
+#button { 
+    margin-left: 28rem;
     background-color: transparent;
     color: aliceblue;
     border-radius: 3em;
@@ -132,7 +167,6 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
 0%{
  /*    background: linear-gradient(to right, #f5f3f3, #212130);
   */       -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     transform: translateY(0);
     
 }
@@ -146,14 +180,6 @@ text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 bl
 }
 }
 
-.h1{
-    animation-name: animacionh1;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode:backwards;  
-    animation-direction:alternate-reverse;
-}
 
 /* @keyframes animacionF{
 0%{
@@ -235,3 +261,38 @@ text-overflow: ellipsis;
 font-size:large;
 text-shadow:0.3rem 0.4rem 0.4rem black;
 }
+
+.p_galeria{
+    
+    color: rgb(255, 255, 255);
+text-align: justify;
+/* text-align: center;
+ */
+text-overflow: ellipsis;
+font-size: xx-large;
+text-shadow:0.7rem 0.5rem 0.4rem black;
+color: white;
+text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container_G {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define 3 columnas con igual ancho */
+    grid-gap: 2rem; /* Espacio entre los elementos */
+
+}
+#img_G{
+    padding: 1.3rem;
+}
+
+
+.section{
+    display:table-cell;
+    max-width: 100%;
+}/* 
+.inputdate::-webkit-calendar-picker-indicator{
+    color: #999;
+    font-size: 16px;
+    cursor: pointer;
+} */

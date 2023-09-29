@@ -4,7 +4,10 @@ from reservaciones.forms import Usuario
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
-# Create your views here.
+from rest_framework.schemas import AutoSchema
+from coreapi import Document, Link
+
+
 
 @method_decorator(login_required, name = 'dispatch')
 def inicio_sesion (request):
@@ -30,7 +33,7 @@ def base (request):
     return render (request, "Base.html")
 
 
-@login_required
+# @login_required
 def homepage (request):
     return render(request, "Homepage.html")
 @login_required
@@ -48,3 +51,4 @@ def programacion (request):
 def informacion (request):
 
     return render (request, "Informacion.html")
+
