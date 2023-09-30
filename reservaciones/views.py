@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from reservaciones.forms import reservacion,Usuario
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
-
+@login_required
 def Reserva(request):
     if request.method == 'POST':
         formularioR = reservacion(request.POST)
@@ -22,7 +22,7 @@ def registro(request):
         FormularioRegistro = Usuario(request.POST)
         if FormularioRegistro.is_valid():
             FormularioRegistro.save()
-            return render(request, 'Registro_completo.html')
+            return render(request, 'Homepage.html')
         
     else:
         FormularioRegistro = Usuario()

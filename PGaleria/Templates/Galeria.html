@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "Base.html" %}
+
+
+{% block title %}
+Galeria
+{% endblock %}
+
+{% block content %}
+<section class="galery">
+    <tbody>
+    <h1>
+    Galeria de Autos que ofrecemos
+    </h1>
+        {% for auto in autos %}
+            <div class="container_G">
+
+                <img id="img_G" src=" {{ auto.imagen.url }}" alt="{{auto.imagen}}">
+                <p class="p_galeria">{{ auto.modelo}}</p>
+                <p class="p_galeria">{{ auto.km_recorridos}} km recorridos</p>
+                
+
+            </div>
+            
+                   
+           
+    {% endfor %}
+</tbody>
+</section>
+{% endblock %}
