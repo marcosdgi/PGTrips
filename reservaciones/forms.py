@@ -16,7 +16,7 @@ class reservacion(forms.ModelForm):
             'Hora' : forms.TimeInput(attrs={'class':'inputtime'})
         }
         
-#Este formulario sera utilizado para guardar los usuarios que se registren dentro de la aplicacion
+#Este formulario sera utilizado para guardar los usuarios que se registren dentro de la aplicacion debera ser modificado en el futuro para organizarlo mejor
 class Usuario(UserCreationForm):
     email = forms.EmailField()
     class Meta():

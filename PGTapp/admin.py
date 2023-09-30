@@ -1,6 +1,6 @@
 from django.contrib import admin
 from PGTapp.models import *
-# Register your models here.
+# Registrando los modelos 
 admin.site.register(Cliente)
 admin.site.register(Acompañante)
 admin.site.register(Auto)

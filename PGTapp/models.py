@@ -50,7 +50,7 @@ class Destino(models.Model):
 class Viaje_Destino(models.Model):
     id_viaje = models.ForeignKey(Viaje, on_delete=models.CASCADE)
     id_destino = models.ForeignKey(Destino, on_delete=models.CASCADE)
-
+#este codigo fue comentado porque se utilizo el model user que ofrece django por defecto 
 """ class Usuario(models.Model):
     nombre_usuario = models.CharField(max_length=50)
     contraseña = models.CharField(max_length=50)
